@@ -1,0 +1,101 @@
+/* 
+    Copyright © 2019 Gallactica
+    https://github.com/gallactica
+*/
+
+:root {
+    --hl: #6E71C4;
+    --color: #D5D5D5;
+    --border: #50555F;
+}
+
+body {
+    background: #282B33FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    font-family: monospace;
+}
+
+.app {
+    width: 420px;
+    height: 295px;
+    background: #282B33;
+    display: flex;
+    color: var(--color);
+    overflow: hidden;
+    border-radius: 0px;
+    user-select: none;
+}
+
+.app .time {
+    flex: 0 0 auto;
+    width: 119px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app .time span {
+    font-size: 40px;
+    width: 48px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    user-select: none;
+    line-height: 66px;
+}
+
+.app .time span:last-child {
+    border: none;
+}
+
+.app .calendar {
+    padding: 0px 10px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+}
+
+.app .calendar .header {
+    margin-top: 5px;
+    flex: 0 0 auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app .calendar .header svg {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.app .calendar .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app .calendar .grid span {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    background-color: #2E343D;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.app .calendar .grid span.today {
+    background-color: var(--hl);
+    box-shadow: 0px 0px 15px 1px var(--hl);
+}
+
+.app .calendar .grid span:empty {
+    background-color: #2E343D50;
+}
